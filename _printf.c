@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
 
 /**
  * _printf - Produces output according to a format
@@ -19,5 +21,3 @@ va_end(args);
 
 return (printed_chars);
 }
-
-
