@@ -35,6 +35,9 @@ int handle_format(const char *format, va_list args)
 {
 int i, printed_chars = 0;
 
+if (!format)
+return (-1);
+
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] == '%')
@@ -72,12 +75,14 @@ n = -num;
 else
 n = num;
 
+
 do
 {
 buffer[i++] = (n % 10) + '0';
 n /= 10;
 }
 while (n > 0);
+
 
 while (--i >= 0)
 {
