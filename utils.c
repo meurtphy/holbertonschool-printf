@@ -1,9 +1,9 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * write_char - Writes a character to stdout
- * @c: The character to print
- * Return: On success 1.
+ * write_char - Écrit un caractère sur stdout
+ * @c: Le caractère à afficher
+ * Return: 1 (nombre de caractères écrits)
  */
 int write_char(char c)
 {
@@ -11,16 +11,16 @@ return (write(1, &c, 1));
 }
 
 /**
- * write_string - Writes a string to stdout
- * @str: The string to print
- * Return: Number of characters printed
+ * write_string - Écrit une chaîne de caractères sur stdout
+ * @str: La chaîne à afficher
+ * Return: Nombre de caractères affichés
  */
 int write_string(char *str)
 {
 int i = 0;
 
 if (!str)
-str = "(nil)";
+str = "(null)";
 
 while (str[i])
 {
