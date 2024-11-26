@@ -11,4 +11,3 @@ int write_char(char c);
 int write_string(char *str);
 
 #endif
-

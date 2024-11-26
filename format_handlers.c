@@ -46,6 +46,3 @@ return (write_char('%'));
 return (0);
 }
 
-
-
-
