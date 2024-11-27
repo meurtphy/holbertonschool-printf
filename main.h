@@ -5,9 +5,9 @@
 #include <unistd.h>
 
 /**
- * struct format_specifier - Structure pour gérer les spécificateurs de format
- * @specifier: Le caractère du spécificateur (par exemple, 'c', 's', 'd')
- * @func: Pointeur vers la fonction qui gère ce spécificateur
+ * struct format_specifier - Structure pour gérer les spécificateurs
+ * @specifier: Le caractère du spécificateur
+ * @func: Pointeur vers la fonction associée
  */
 typedef struct format_specifier
 {
@@ -20,14 +20,13 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 
 
-int print_string(va_list args);
 int print_char(va_list args);
+int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
 int print_number(unsigned int num);
 
 
-int handle_specifier(const char specifier, va_list args,
-format_specifier_t specifiers[]);
+int handle_specifier(const char specifier, va_list args, format_specifier_t specifiers[]);
 
 #endif

@@ -1,14 +1,35 @@
 #include "main.h"
 
 /**
+ * handle_specifier - Gère les spécificateurs de format
+ * @specifier: Le caractère du spécificateur
+ * @args: Liste des arguments
+ * @specifiers: Tableau des spécificateurs
+ * Return: Nombre de caractères imprimés
+ */
+int handle_specifier(const char specifier, va_list args, format_specifier_t specifiers[])
+{
+int i;
+
+for (i = 0; specifiers[i].specifier != '\0'; i++)
+{
+if (specifiers[i].specifier == specifier)
+return (specifiers[i].func(args));
+}
+
+
+_putchar('%');
+_putchar(specifier);
+return (2);
+}
+
+/**
  * _printf - Produit une sortie formatée
  * @format: La chaîne de format
  * Return: Nombre de caractères imprimés
  */
 int _printf(const char *format, ...)
-
 {
-
 format_specifier_t specifiers[] = {
 {'c', print_char},
 {'s', print_string},
@@ -38,12 +59,8 @@ else
 printed_chars += _putchar(format[i]);
 }
 }
+
 va_end(args);
 return (printed_chars);
 }
-
-
-
-
-
 
