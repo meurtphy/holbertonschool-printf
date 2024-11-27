@@ -7,9 +7,7 @@
  * @specifiers: Tableau des spécificateurs
  * Return: Nombre de caractères imprimés
  */
-int handle_specifier(const char specifier, va_list args,
-format_specifier_t specifiers[]);
-
+int handle_specifier(const char specifier, va_list args, format_specifier_t specifiers[])
 {
 int i;
 
