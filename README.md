@@ -1,4 +1,4 @@
-Fonction principales de format_handlers.c
+# Fonction principales de format_handlers.c
 
 1.handle_specifier
 
@@ -36,7 +36,7 @@ Hello bébé Patrick, age: 60
 ///////////////////////////
 Vous me suivez encore ?
 
-La fonction suivante c est write_number
+# La fonction suivante c est write_number
 
 Pour commencer on va faire la chose la plus simple afficher - si le chiffre est negatif
 
@@ -92,7 +92,7 @@ Bon on va faire une petite pause mais le plus long et le plus dur a comprendre p
 /////////////////////////////////
 ////////////////////////////////
 
-maintenant je vais passer au main.h c est simpe efficace il contient toute les fonction a appeller
+# maintenant je vais passer au main.h c est simpe efficace il contient toute les fonction a appeller
 et il y a aussi le _putchar.c c est negligeable si vous ne savez pas pourquoi je les cree et utiliser bonne chance que le sort puisse vous etre favorable <3
 
 /////////////////////////////////
@@ -103,7 +103,7 @@ et pour finir le bouquet final nous avonz le printf.c
            !!!!!!!!!!!!!!
 
 
-Cette fonction est une version simplifiée de printf en C. Elle permet d'afficher du texte formaté sur la sortie standard (stdout), en interprétant des spécificateurs comme %d, %s, %c, etc
+# Cette fonction est une version simplifiée de printf en C. Elle permet d'afficher du texte formaté sur la sortie standard (stdout), en interprétant des spécificateurs comme %d, %s, %c, etc
 
 if (!format)
     return (-1);
@@ -132,7 +132,7 @@ return (printed_chars);
 La fonction retourne le nombre total de caractères affichés.
 Exemple : Si _printf affiche "Hello John", il retourne 10 (car il y a 10 caractères).
 
-
+---c
 int len = _printf("Name: %s, Age: %d\n", "Patrick", 60);
 Fonctionnement :
 format contient : "Name: %s, Age: %d\n".
